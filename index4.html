@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title> Virtual Reality Tour By Prasiske Dea Veriani</title>
+    <style>
+        body {
+            font-family: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: rgb(98, 178, 214);
+        }
+
+        h1 {
+            margin-top: 70px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 30px;
+            padding: 10px 20px;
+            font-size: 19px;
+            color: white;
+            background-color: rgb(78, 197, 206);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: rgb(131, 173, 235);
+        }
+
+        .content {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(45, 117, 122);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: rgb(109, 124, 255);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Selamat Datang di Virtual Reality Tour by Adinda Putri</h1>
+    <button class="button" onclick="showContent('start')">Mulai</button>
+    <button class="button" onclick="showContent('guide')">Pemandu</button>
+    <button class="button" onclick="showContent('about')">Tentang</button>
+
+    <div id="start" class="content">
+        <iframe src="virtual_tour.html"></iframe>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Kembali</a>
+    </div>
+
+    <div id="guide" class="content">
+        <h2>Berikut adalah panduan penggunaan Virtual Tour ini:</h2>
+        <p>1. Klik menu "Mulai" untuk memasuki tur virtual sekolah ini..</p>
+        <p>2. Setelah itu, klik tombol "VR" di pojok kanan bawah untuk mengaktifkan mode tur virtual yang lebih luas dan lengkap.</p>
+        <p>3. Perhatikan dengan cermat! Di tengah layar virtual terdapat kursor berbentuk lingkaran hitam yang dapat digunakan sebagai titik navigasi dan menggantikan kursor laptop untuk mengklik gambar lainnya.</p>
+        <p>4. Klik tombol biru "Kembali" untuk kembali ke halaman utama.</p>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Kembali</a>
+    </div>
+
+    <div id="about" class="content">
+        <h2>Tentang Sekolah Virtual Tour</h2>
+        <p>Ini adalah Virtual Tour rumah sakit yang ada di Lampung, semoga dengan adanya virtual tour ini dapat membantu dan menambah pengetahuan ataupun hanya untuk sekedar mencari tahu tentang rumah sakit yang ada di Lampung .</p>
+        <p>Dibuat oleh : Prasiske Dea Veriani, NPM 2113025028, PTI 2021</p>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Kembali</a>
+    </div>
+
+    <script>
+        function showContent(id) {
+            document.getElementById('start').style.display = 'none';
+            document.getElementById('guide').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function hideContent() {
+            document.getElementById('start').style.display = 'none';
+            document.getElementById('guide').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
